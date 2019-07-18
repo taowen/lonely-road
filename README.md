@@ -6,3 +6,13 @@
 * https://blog.acolyer.org/2015/03/20/out-of-the-tar-pit/
 * http://cell-lang.net/
 * https://news.ycombinator.com/item?id=15797831
+* http://www.subtext-lang.org/
+* http://alarmingdevelopment.org/
+* http://lighttable.com/
+* http://witheve.com/
+* https://github.com/witheve/eve-experiments/tree/master/design
+
+
+other list
+
+* https://github.com/pel-daniel/mind-bicycles
