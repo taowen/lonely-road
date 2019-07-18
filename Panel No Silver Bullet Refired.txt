@@ -1,0 +1,230 @@
+Panel: No Silver Bullet Refired -- A Retrospective on "Essence and Accidents of Software Engineering"
+OOPSLA 2007 Conference, Montreal 
+Wednesday October 24, 11:00-12:30
+Panel members: 
+Fred Brooks, University of North Carolina 
+Dave Parnas, University of Limerick 
+Linda Northrop, Software Engineering Institute 
+Aki Namioka, Cisco Systems 
+Ricardo Lopez, Qualcomm 
+Dave Thomas, Bedarra Labs 
+Martin Fowler, ThoughtWorks
+
+Panel chair: Steve Fraser, Cisco Systems
+
+Panel session notes by Dennis Mancl (mancl@alcatel-lucent.com).
+
+[Note: This is not an exact transcript of the panel discussion -- not even close. They are my notes about each question and response. I have done a lot of paraphrasing of the questions and the responses. Each question is marked with a "Q" (sometimes with the questioner indicated), and the responses are marked with the first name of the panelist; Every question has been abbreviated to get to the main point. Every response summarizes the content of the panelist's response, frequently capturing the key words that they used.]
+
+Opening statements
+
+Fred Brooks.  In my paper, I postulated that there are differences in the complexity of building software:
+
+essential - complexity related to the conceptual structure
+accidental - not related to conceptual structure, based on development process
+I thought in 1986 that it was likely that the accidental complexity of projects was less than 90% of the total, so shrinking the accidental complexity to zero could not result a productivity improvement of an order of magnitude.
+I used the image of the werewolf, because I found that at the beginning, most software projects are innocent and straightforward, but in the light of the moon, they turn bad.
+
+The rest of the paper then takes on some of the existing proposed Silver Bullets.
+
+I made a bold statement in the paper: no single technique will cause an order of magnitude improvement in productivity in the next ten years (1986-1996). This has turned out true. If there is one technique that has made a significant improvement, it is OO programming.
+
+David Parnas.  It's obvious that there isn't a Silver Bullet. A Silver Bullet is characterized by being something that takes no skill. You should be able to just aim it at the werewolf and it will work. My question: Why did Fred feel he needed to write the paper? And since we can see that he was right, why are we still talking about it?
+
+One reason is that there is still a proportion of our community trying to make money. (There are people who would try to sell wooden legs to a snake. We might also get people to measure snake productivity.) In order to sell whatever idea they believe in (and many honestly believe in the goodness of their product), they paint it as a Silver Bullet, so people will listen to them.
+
+Another point -- it is said that a poor craftsman blames his tools. There are many people who don't want to work hard and don't want to change what they are doing, and they believe a Silver Bullet would allow them to get things done without requiring change.
+
+Linda Northrop.  There are many key phrases from the No Silver Bullet paper that are lodged in my memory. The intellectual clarity of the paper has profound meaning to us. Although I agree that there is no Silver Bullet, we are building more complex systems. We have made progress when we have focused on the essence.
+
+In the object community, we need to think more about this. Simula was about modeling (as much as about programming). In a 2001 OOPSLA Educators Symposium talk, Kristen Nygaard said that we have lost the essence.
+
+Today, the demand for software intensive systems is increasing. The four "promising attacks" in Brooks' article have become more important. For example, Buy not build is a fact of life. Our "accidental" innovations have only helped a little. There has been an increased need for good designers, and we need a more interdisciplinary perspective than before.
+
+Aki Namioka.  I have been a manager of application development teams for the past 10 years. We are in the middle of the development process, really in the trenches.
+
+Looking back over the last 20 years: I agree with the essence of the article, but I'm more optimistic. The software developer's role has expanded -- it is more than just writing code, it includes assembling things on the Web. We have put tools in the hands of non-programmers for Web development. For example, only 15% of Second Life users are programmers.
+
+Today, it takes a village to produce an application: quality assurance, ISO inspectors, product managers, sales staff, and so on.
+
+Dave Thomas.  Years ago, I was one of the biggest Pied Pipers of OO. I found Fred's article to be a challenge.
+
+If you look at the state of OO middleware, we have a gratuitous disaster. There is no hope that even smart people can stay on top of the latest changes to frameworks, and it is hard to write stable applications. Our framework developers make the incorrect assumption that the average Canadian developer (or average American developer) looks just like us. Tools and frameworks help create a lot of unmaintainable code quickly -- "crud programs".
+
+I think that there is a big class of problems that are simpler than we make them. For example, Second Life is an application that just based on "store state". I have seen applications where a mainframe with a 4GL plus heterogeneous database software would be much better than building a Java system.
+
+Our industry is emphasizing certificates instead of competence. What we need is a set of common concepts for understanding things.
+
+There have been some good things in Objects, but we have muddled them. Agile is great -- but it doesn't handle all things that go on in a large-scale system. A positive trend from Agile and XP: Developers now know they need to test. So I would say that we have some Lead Bullets (not Silver Bullets).
+
+Ricardo Lopez.  (answering Dave Thomas's point) We have a lot of Silver Bullets, and they are killing us...
+
+I claim we do have do have Silver Bullets.
+
+The main source of Silver Bullets -- our fear of failing. Humans usually try to avoid the things we fear. The way we have personified our fear (in software development) -- we call it "complexity".
+
+A few points:
+
+Simplicity is not conserved
+Life is complex
+But life is elegant in its complexity
+Humans have a drive to do productivity optimization that is inborn.
+We need to embrace the facts that "complexity is inevitable" and "we always try to optimize".
+
+Let's embrace complexity. Failure to embrace complexity causes you to add accidental complexity.
+
+Don't look for Silver Bullets outside. You are the Silver Bullet -- when you attempt to improve yourself and others.
+
+I have been thinking about this because the wildfires in the San Diego area this week [week of October 22, 2007]. My family is in the evacuation area, and I have been worried. But I can see that we have made an improvement of several orders of magnitude in fire fighting and disaster assistance over the years.
+
+Martin Fowler.  I reread the paper. It continues to be an enjoyable and useful read. The Essential/Accidental concepts are useful. It is a paper you should all read. Uggggh... aaaahhh... [Martin falls under the table and returns to his chair as a werewolf.]
+
+I am alive and well! Why have I survived?
+
+OO is a dangerous and evil idea. But I have overcome it without much difficulty. It has many good ideas, but no one does it! Most of the world has no idea.
+
+I have other weapons, such as multi-core concurrency system: thread problems and race conditions will add to the accidental complexity.
+
+There have been some attacks on the essence.
+
+Buy versus build -- it is a great theory, but the weakness is in bad libraries.
+Grow great designers -- Many of you understand this, but outside of here, no one understands. Everyone thinks that software is easy. The invisibility of software development implies that people don't think it is that hard.
+encouraging prototyping and doing iterative development -- "How much I have come to adore waterfalls." Managers want to pin down costs, commit to unrealistic plans, have an illusion of control, and make predictions without enough data.
+Even Lead Bullets don't hurt me -- so much for trying to create Silver Bullets. In fact, my allies are the creators of many of the tools that are sold as Silver Bullet tools (tools that actually increase complexity).
+
+Q1.  (Bertrand Meyer, ETH)  People should ask for intellectual honesty. The Silver Bullet paper gives a ready-made argument to reject new things. When we try to sell new ideas, exaggeration is part of the business. In the 1990s, there were many conservative managers who wanted to reject anything new, and they used the Silver Bullet paper to chase me away.
+I applaud the customers who have been trying to demand new things. Also, thanks for the people who have been trying to promote their Silver Bullets.
+
+Brooks.  If it doesn't attack the essence, it won't solve the real difficulty. If it does, it is a fruitful direction.
+
+Northrop.  We need to focus on the user needs, not just sell things as a new technology. Ask what will it do for my business goals and needs.
+
+I should point out that there is an ignoble reason to trumpet a Silver Bullet: greed.
+
+Q2.  (John Roberts, Qualcomm)  A potential Silver Bullet is to get all your best people together. Comments?
+
+Lopez.  Exactly my point. Agile gives a great ratio of your best people with your "young" (not your "worst"). You can get your best together to resist fear, and get an opportunity for others to learn.
+
+Parnas.  People are out there selling their Silver Bullets. I think that if the training time is three to five days, it is a Silver Bullet. If the training time is years, it is a Lead Bullet.
+
+My advice to the people selling: If you have a Silver Bullet, sell it to IBM. If you have a Lead Bullet, turn to education.
+
+Thomas.  If training is 2 to 3 days, it is a "scam" (not a Silver Bullet).
+
+Competency is only achieved through practice. Advice: Work with better people and learn from them. Managers shouldn't isolate their good guys. We need more "playing coaches" (sports metaphor).
+
+Werewolf (Fowler).  Good people can't collaborate in teams -- I enjoy stopping the collaboration of good people. People don't work hard enough at getting a team of people to collaborate.
+
+I can always use a heavyweight process.
+
+The Agile folks always undermine their community -- they don't communicate what is important.
+
+Q3.  (Joe Yoder, Refactory)  I've seen projects that are successful with silver buckshot: good people, understanding what requirements will change, refactoring, good design, people working together. It helps fight the werewolf and we work to get the software out. We think of being a software commando team. Comments?
+
+Thomas.  It is fortunate to work with a unique set of people. Unfortunately, I don't know how to do it. How do we get the esprit de corps?
+
+Leadership helps. Fail-fast, fail-often helps. But to be a true Silver Bullet, it has to be scalable.
+
+Brooks.  I want to mention two books that discuss leadership:
+
+Peopleware, Tom DeMarco and Tim Lister.
+The Carolina Way: Leadership Lessons from a Life of Coaching, Dean Smith, Gerald Bell, and John Kligo.
+Northrop.  We don't lead, we manage. My brother (he was a football coach) was into character and leadership. See the chapter "It Takes a Leader" in my book Software Product Lines for the story.
+
+Werewolf (Fowler).  Peopleware is one of the most dangerous books out there. Fortunately, MS-Project is easier for managers.
+
+"Each time someone makes another Gantt chart or Pert chart, I get to eat another kitten."
+
+Q4.  How do we quantify the impact of new technologies?
+
+Werewolf (Fowler).  There is no way to run sensible experiments. You can just argue at conferences. You can't use measurement and science.
+
+Lopez.  Productivity measurement is hard. Lines of code is crap. Agile uses completed user stories, but we can't decide on how to weight them. Closure of customer requirements could work. We can ask how much complexity we have embraced. We have measures of the aggregate productivity of a society, but how can we go down to the micro?
+
+Parnas.  There is a measurement dilemma. Do you prefer 500 lines in 2 days or 100 lines in 3 days? I like non-quantitative measures. Give some completed code to a stranger, along with a proposed change, then evaluate the difficulty of making that change.
+
+Namioka.  I cringe at productivity measures. What are the goals that you want to achieve? (Most of the time, you just want me to do more.)
+
+Q5.  There is a nonlinear complexity increase going from a small HTML website to large systems.
+
+Namioka.  What were the requirements? If we need to deal with security and online transactions, we need more than simple HTML. This will lead to more complexity.
+
+Parnas.  I criticize errors in websites all the time. Nine times out of ten, they say "we had a great website person, but he left."
+
+Northrop.  There is a cost of not having the right team -- they wind up building a cheesy system. You have to point out the risks and costs to managers.
+
+Thomas.  That's a breakdown in communication. We need to develop trust with managers.
+
+Q6.  After reading about Essential and Accidental, I still have the feeling that I am fighting through this instead of working on the real problem.
+
+Namioka.  We have made an impact on the accidents with our programming environments and debuggers.
+
+Parnas.  When building a house on uneven land, you have to make a smooth foundation first. After it is smooth, the rest of the building work goes quickly.
+
+Werewolf (Fowler).  Communication is an obstacle between software writers and the people who receive the system. Managers don't want to talk with the software people. Most software people are incompetent in talking to anyone.
+
+Here is what happens:
+
+put the communication in documents
+it's hard to focus on business problems
+developers build more infrastructure instead of business functionality
+Q7.  (Brian Foote)  Somehow, the world is working -- by building appalling code. Let's make people more effective at creating bad code.
+
+Lopez.  Society is becoming more and more vulnerable to software failure. We need to have a way to weed out cataclysmic software.
+
+Parnas.  What's good for developers isn't necessarily good for the world. I know folks who have developed applications that only they can fix.
+
+Thomas.  I didn't want to say that we are all stupid... (earlier comments about certification versus competence).
+
+Q8.  If we have unrealistic objectives as our reason to look for a Silver Bullet, can we train business folks in IT skills so they will have a more realistic view?
+
+Parnas.  If we required Montreal drivers to have a mechanical engineering degree, it would reduce traffic.
+
+Q9.  (Dave Ungar)  I'll challenge the premise of the panel. The Silver Bullets are "thought systems" -- such as the ideas in Brooks' Mythical Man Month book and Parnas' works on decomposing systems into modules.
+
+Parnas.  I deny what I wrote ever was a Silver Bullet. My stuff takes training. Fred will say the same about his ideas.
+
+Brooks.  But you've got to work.
+
+Parnas.  And you need training.
+
+Lopez.  Take good ideas and mix them with human nature.
+
+Q10.  It took 1000 years to go from geometry to calculus. How do we "finish" objects so it can be used by real people?
+
+Parnas.  That the topic of my talk this afternoon. You won't like the answer.
+
+Brooks.  Make a system good for one application, then generalize.
+
+Lopez.  Archimedes developed calculus, then the Romans annihilated it (him). So when you finally get objects completely developed, don't let them get destroyed.
+
+Thomas.  Stop building frameworks where all of the insides leak out. Think about packaging your software as a component -- to avoid accidental complexity. A lot of other techniques that can be used in the alchemy of building systems.
+
+Closing statements 
+
+Werewolf (Fowler).  It's easy to misunderstand my nature. I'm not harmed by your success. My power is in my unexpected appearance. Surprise makes me powerful. Humans have so much optimism -- you all overestimate your capabilities.
+
+Lopez.  He's wrong. He is annihilated every day, and we create new complexity every day. The complexity in our life in 10 years will be different from today's complexity.
+
+Thomas.  Thanks to Fred for the grand challenge. Not achieving the challenge is not as important as the journey.
+
+Namioka.  Experienced engineers are needed to build the most difficult complex systems. But we have a lot of simpler systems to build too.
+
+Northrop.  It's a real highlight for me to be on a panel with Fred Brooks and Dave Parnas here at OOPSLA. We need to applaud the audience because we all are continuing to try to do better. Remember in life to focus on the essence, not the accidents.
+
+Parnas.  There has been unfair criticism of waterfall. It has been a straw man made to try to sell something better.
+
+We are making progress when we make simpler system.
+
+In the photo in the conference program, you see my pet schnauzer. He has no fear of werewolves, because he doesn't expect easy solutions to hard problems.
+
+Brooks.  I have less to say than then others, because I haven't worked in this field for a while. I have ten years of ignorance since 1997.
+
+A caution: I know of no other field where people do less study of other people's work.
+
+Books cited during the panel:
+
+The Mythical Man-Month, Frederick P. Brooks, Jr.
+Peopleware, Tom DeMarco and Tim Lister.
+The Carolina Way: Leadership Lessons from a Life of Coaching, Dean Smith, Gerald Bell, and John Kligo.
+Software Product Lines: Practices and Patterns, Paul Clements and Linda Northrop.
