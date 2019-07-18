@@ -24,3 +24,4 @@ other list
 * https://github.com/pel-daniel/mind-bicycles
 * https://futureofcoding.org/
 * http://www.cs.cmu.edu/~NatProg/
+* http://www.ppig.org/
