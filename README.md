@@ -13,6 +13,7 @@
 * https://github.com/witheve/eve-experiments/tree/master/design
 * https://darklang.com/
 * http://worrydream.com/
+* https://www.lamdu.org/
 
 other list
 
