@@ -1,5 +1,6 @@
 # lonely-road
 
+* [No Silver Bullet](/Brooks-NoSilverBullet.pdf)
 * [The Dog Programming Language](/Dog-UIST2013.pdf)
 * https://www.media.mit.edu/projects/the-dog-programming-language/overview/
 * [Out of the Tar Pit](/MoseleyMarks06a.pdf)
