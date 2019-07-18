@@ -14,8 +14,11 @@
 * https://darklang.com/
 * http://worrydream.com/
 * https://www.lamdu.org/
+* [Debugging Reinvented: Asking and Answering Why and Why Not Questions about Program Behavior](/3edb01c308c7edafa8facc1d0e2b9cc13a69.pdf)
+* [Improving Program Comprehension by Answering Questions](/MyersICPC2013NatProg.pdf)
 
 other list
 
 * https://github.com/pel-daniel/mind-bicycles
 * https://futureofcoding.org/
+* http://www.cs.cmu.edu/~NatProg/
