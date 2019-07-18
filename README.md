@@ -11,8 +11,9 @@
 * http://lighttable.com/
 * http://witheve.com/
 * https://github.com/witheve/eve-experiments/tree/master/design
-
+* https://darklang.com/
 
 other list
 
 * https://github.com/pel-daniel/mind-bicycles
+* https://futureofcoding.org/
