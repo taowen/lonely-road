@@ -26,3 +26,4 @@ other list
 * https://futureofcoding.org/
 * http://www.cs.cmu.edu/~NatProg/
 * http://www.ppig.org/
+* https://2018.splashcon.org/track/plateau-2018-papers
