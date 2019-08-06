@@ -25,5 +25,7 @@ other list
 * https://github.com/pel-daniel/mind-bicycles
 * https://futureofcoding.org/
 * http://www.cs.cmu.edu/~NatProg/
-* http://www.ppig.org/
-* https://2018.splashcon.org/track/plateau-2018-papers
+* PPIG: http://www.ppig.org/
+* PLATEAU: https://2018.splashcon.org/track/plateau-2018-papers
+* LIVE: https://2018.splashcon.org/track/live-2018-papers#About
+* BOB: https://bobkonf.de/2019-summer/program.html
