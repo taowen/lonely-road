@@ -34,4 +34,5 @@ other list
 * PPIG: http://www.ppig.org/
 * PLATEAU: https://2018.splashcon.org/track/plateau-2018-papers
 * LIVE: https://2018.splashcon.org/track/live-2018-papers#About
+* META: https://2018.splashcon.org/track/meta-2018
 * BOB: https://bobkonf.de/2019-summer/program.html
