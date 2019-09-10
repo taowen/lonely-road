@@ -22,6 +22,8 @@
 
 other list
 
+* https://futureofcoding.org/catalog/
+* https://github.com/ivanreese/visual-programming-codex
 * https://github.com/pel-daniel/mind-bicycles
 * https://futureofcoding.org/
 * http://www.cs.cmu.edu/~NatProg/
