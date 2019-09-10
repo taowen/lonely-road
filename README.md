@@ -20,6 +20,10 @@
 * [Improving Program Comprehension by Answering Questions](/MyersICPC2013NatProg.pdf)
 * [B-threads: programming in a way that allows for easier changes](https://medium.com/@lmatteis/b-threads-programming-in-a-way-that-allows-for-easier-changes-5d95b9fb6928)
 
+people
+
+* Tomas Petricek http://tomasp.net/
+
 other list
 
 * https://futureofcoding.org/catalog/
