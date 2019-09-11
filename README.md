@@ -25,6 +25,7 @@ people
 * Jonathan Edwards http://alarmingdevelopment.org/
 * Bret Victor http://worrydream.com/
 * Conal Elliott http://conal.net/
+* Paul Chiusano https://pchiusano.github.io/
 
 other list
 
