@@ -39,3 +39,4 @@ other list
 * LIVE: https://2018.splashcon.org/track/live-2018-papers#About
 * META: https://2018.splashcon.org/track/meta-2018
 * BOB: https://bobkonf.de/2019-summer/program.html
+* <programming>: https://2019.programming-conference.org/track/programming-2019-papers#program
