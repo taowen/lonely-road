@@ -34,6 +34,9 @@ other list
 * https://github.com/pel-daniel/mind-bicycles
 * https://futureofcoding.org/
 * http://www.cs.cmu.edu/~NatProg/
+
+conference
+
 * PPIG: http://www.ppig.org/
 * PLATEAU: https://2018.splashcon.org/track/plateau-2018-papers
 * LIVE: https://2018.splashcon.org/track/live-2018-papers#About
@@ -41,4 +44,4 @@ other list
 * BOB: https://bobkonf.de/2019-summer/program.html
 * ENASE: https://www.scitepress.org/ProceedingsDetails.aspx?ID=Xg68+lAo/Jg=&t=1
 * ECOOP: https://2019.ecoop.org/
-* <programming>: https://2019.programming-conference.org/track/programming-2019-papers#program
+* `<programming>`: https://2019.programming-conference.org/track/programming-2019-papers#program
