@@ -1,5 +1,7 @@
 # lonely-road
 
+## shining idea
+
 * [No Silver Bullet](/Brooks-NoSilverBullet.pdf)
 * http://manclswx.com/workshops/oopsla07/silver_panel.html
 * [The Dog Programming Language](/Dog-UIST2013.pdf)
@@ -18,7 +20,7 @@
 * [Improving Program Comprehension by Answering Questions](/MyersICPC2013NatProg.pdf)
 * [B-threads: programming in a way that allows for easier changes](https://medium.com/@lmatteis/b-threads-programming-in-a-way-that-allows-for-easier-changes-5d95b9fb6928)
 
-people
+## people
 
 * Steve Krouse https://futureofcoding.org/log
 * Tomas Petricek http://tomasp.net/
@@ -27,15 +29,16 @@ people
 * Conal Elliott http://conal.net/
 * Paul Chiusano https://pchiusano.github.io/
 
-other list
+## other list / group
 
 * https://futureofcoding.org/catalog/
 * https://github.com/ivanreese/visual-programming-codex
 * https://github.com/pel-daniel/mind-bicycles
 * https://futureofcoding.org/
 * http://www.cs.cmu.edu/~NatProg/
+* HPI: http://www.hpi.uni-potsdam.de/hirschfeld/publications/index.html
 
-conference
+## conference
 
 * PPIG: http://www.ppig.org/
 * PLATEAU: https://2018.splashcon.org/track/plateau-2018-papers
