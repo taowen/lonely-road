@@ -40,4 +40,5 @@ other list
 * META: https://2018.splashcon.org/track/meta-2018
 * BOB: https://bobkonf.de/2019-summer/program.html
 * ENASE: https://www.scitepress.org/ProceedingsDetails.aspx?ID=Xg68+lAo/Jg=&t=1
+* ECOOP: https://2019.ecoop.org/
 * <programming>: https://2019.programming-conference.org/track/programming-2019-papers#program
