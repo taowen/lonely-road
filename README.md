@@ -24,6 +24,7 @@ people
 * Tomas Petricek http://tomasp.net/
 * Jonathan Edwards http://alarmingdevelopment.org/
 * Bret Victor http://worrydream.com/
+* Conal Elliott http://conal.net/
 
 other list
 
