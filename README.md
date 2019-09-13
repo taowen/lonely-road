@@ -28,6 +28,8 @@
 * Bret Victor http://worrydream.com/
 * Conal Elliott http://conal.net/
 * Paul Chiusano https://pchiusano.github.io/
+* Edward de Jong http://www.e-dejong.com/
+* Duncan Cragg http://duncan-cragg.org/blog/
 
 ## other list / group
 
