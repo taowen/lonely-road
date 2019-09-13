@@ -19,6 +19,8 @@
 * [Debugging Reinvented: Asking and Answering Why and Why Not Questions about Program Behavior](/3edb01c308c7edafa8facc1d0e2b9cc13a69.pdf)
 * [Improving Program Comprehension by Answering Questions](/MyersICPC2013NatProg.pdf)
 * [B-threads: programming in a way that allows for easier changes](https://medium.com/@lmatteis/b-threads-programming-in-a-way-that-allows-for-easier-changes-5d95b9fb6928)
+* http://object.network/onex-app.html
+* https://github.com/magicmouse/beads-examples
 
 ## people
 
