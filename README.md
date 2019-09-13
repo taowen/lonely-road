@@ -21,6 +21,7 @@
 * [B-threads: programming in a way that allows for easier changes](https://medium.com/@lmatteis/b-threads-programming-in-a-way-that-allows-for-easier-changes-5d95b9fb6928)
 * http://object.network/onex-app.html
 * https://github.com/magicmouse/beads-examples
+* https://awelonblue.wordpress.com/2012/10/21/local-state-is-poison/
 
 ## people
 
