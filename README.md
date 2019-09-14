@@ -22,6 +22,7 @@
 * http://object.network/onex-app.html
 * https://github.com/magicmouse/beads-examples
 * https://awelonblue.wordpress.com/2012/10/21/local-state-is-poison/
+* http://dalsegno.ballingt.com/
 
 ## people
 
@@ -33,6 +34,7 @@
 * Paul Chiusano https://pchiusano.github.io/
 * Edward de Jong http://www.e-dejong.com/
 * Duncan Cragg http://duncan-cragg.org/blog/
+* Thomas Ballinger http://ballingt.com/
 
 ## other list / group
 
