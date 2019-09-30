@@ -35,6 +35,7 @@
 * Edward de Jong http://www.e-dejong.com/
 * Duncan Cragg http://duncan-cragg.org/blog/
 * Thomas Ballinger http://ballingt.com/
+* Kartik Agaram http://akkartik.name/
 
 ## other list / group
 
