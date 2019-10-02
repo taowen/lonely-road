@@ -56,3 +56,4 @@
 * ENASE: https://www.scitepress.org/ProceedingsDetails.aspx?ID=Xg68+lAo/Jg=&t=1
 * ECOOP: https://2019.ecoop.org/
 * `<programming>`: https://2019.programming-conference.org/track/programming-2019-papers#program
+* CHASE: http://www.wikicfp.com/cfp/servlet/event.showcfp?eventid=84597&copyownerid=139082
