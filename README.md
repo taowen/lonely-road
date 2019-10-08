@@ -23,6 +23,7 @@
 * https://github.com/magicmouse/beads-examples
 * https://awelonblue.wordpress.com/2012/10/21/local-state-is-poison/
 * http://dalsegno.ballingt.com/
+* http://ngnghm.github.io/index.html
 
 ## people
 
