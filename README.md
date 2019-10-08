@@ -37,6 +37,7 @@
 * Duncan Cragg http://duncan-cragg.org/blog/
 * Thomas Ballinger http://ballingt.com/
 * Kartik Agaram http://akkartik.name/
+* François-René Rideau http://fare.tunes.org/
 
 ## other list / group
 
