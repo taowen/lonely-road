@@ -33,7 +33,7 @@
 * Bret Victor http://worrydream.com/
 * Conal Elliott http://conal.net/
 * Paul Chiusano https://pchiusano.github.io/
-* Edward de Jong http://www.e-dejong.com/
+* Edward de Jong http://beadslang.org/
 * Duncan Cragg http://duncan-cragg.org/blog/
 * Thomas Ballinger http://ballingt.com/
 * Kartik Agaram http://akkartik.name/
