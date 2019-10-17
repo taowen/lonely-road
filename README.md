@@ -24,6 +24,7 @@
 * https://awelonblue.wordpress.com/2012/10/21/local-state-is-poison/
 * http://dalsegno.ballingt.com/
 * http://ngnghm.github.io/index.html
+* https://github.com/aquametalabs/aquameta
 
 ## people
 
@@ -38,6 +39,7 @@
 * Thomas Ballinger http://ballingt.com/
 * Kartik Agaram http://akkartik.name/
 * François-René Rideau http://fare.tunes.org/
+* Eric Hanson http://blog.aquameta.com/author/eric/
 
 ## other list / group
 
