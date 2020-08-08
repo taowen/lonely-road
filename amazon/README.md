@@ -1,157 +1,121 @@
-well let's have a look at workflow
+下面这个例子来自于 Finding your service boundaries - a practical guide - Adam Ralph (https://www.youtube.com/watch?v=tVnIUZbsxWI&t=2482s)。
+以下为中文译本
 
-I'm sure most of you have bought something on Amazon at some stage or something similar.
-when you buy something on Amazon you start a workflow.
-so you say place your order first of all, 
+我相信大家都在亚马逊之类的网站上买过东西。当你在亚马逊上买东西的时候就开始了一个工作流。第一步，下单
 
-【图1】
+![step1](./step1.png)
 
-and then you might select your shipping address. 
-you know where you can actually get this way actually going to receive this book whatever is the ordering
+然后选择你的送货地址
 
-【图2】
+![step2](./step2.png)
 
-you put in your credit card details and etc
+选择使用的信用卡
 
-【图3】
+![step3](./step3.png)
 
-etc
+再选择送货方式
 
-【图4】
+![step4](./step4.png)
 
-etc
+再确认
 
-【图5】
+![step5](./step5.png)
 
-until you actually place your order.
-now Amazon is not a monolith.
-it's actually probably one of the most service-oriented companies in the world.
-there is not an one terabyte Amazon back see that they roll out its a bunch of different services.
-so you can imagine there's a lot of services going into this workflow which are orchestrating together to make this happen.
-now if we look at the events or look at the backend messaging and events that happen when you place your order.
-it might look something like this.
-so we have here a sales service a finance service and a shipping service.
-when we click that button we can send the command to the sales service to say place your order.
-sales can then go and do whatever logic it needs to do:
-have we still got this item in stock,
-it's still for sale if it's not in stock can we order more etc etc
-and in the end it says ok we're good to go.
-the orders been placed it can publish an event which Finance and shipping can subscribe to.
-finance when it receives that event it can bill the customer for that order.
-it can raise an order build event.
-and then when shipping knows that the orders been placed the orders been billed we're good to go.
-ship out the door raise another event.
-you know an auto ship with something else then might want to carry on within that workflow.
+直到你最终完成整个下单过程。
+我们都知道亚马逊不是一个 Monolith。
+它也许是世界上最 Service-oriented 的公司了。
+亚马逊发布的时候不会打包成一个T的应用，然后一起发布。
+所以你可以假设在这个工作流中是有很多个Service参与的，它们被某种形式编排，从而使得流程变成这个样子。
+那么在你下单的时候，我们看以下后端的会有哪些 Event。
+它们可能是这个样子的：
 
+![workflow](./workflow.drawio.svg)
 
-the question then is what should each of these events contain.
-should the order placed event contain all the information that shipping needs in order to ship the item so the address etc etc
-should the event contain all the information that finance needs to complete the order to build the customer credit card details and that kind of thing 
-now that would work, right, that would work 
-but what's the problem with that approach
-its coupling
-we're getting back into a highly coupled situation
-if that event needs to have the address the shipping option the credit card details and everything on it.
-we can no longer make changes in an isolated fashion.
-we want to change anything about how we ship things, or how we build for things.
-we're gonna have to make changes in sales as well as finance, or sales as well as shipping.
-imagine if we wanted to start charging in Bitcoin, 
-we'd have to give sales all the information about how to charge in Bitcoin all the data that's required
-so it could pass on that information to finance.
-what if we wanted start shipping ebooks we don't send an e-book to a physical address that will just be weird.
-so we don't want to give that we don't want to give sales all information about how should be an e-book 
-so it can pass that on to shipping
+有 sales，finance，shipping 三个 service。
+当我们点击确认按钮的时候，command 被发往 sales，它可以做它想做的任何逻辑。比如检查以下东西是不是还有货，如果还在售但是库存不足了，我们可以往供应商再追加一笔供货单等。最终，sales 说，我搞定了，到下一步吧。
 
-now what I just described our fat events right
-and you can see that if we were to start ship if we were to start shipping ebook
-and charging a Bitcoin that event will get fatter and fatter and fatter, with more information on it
-something's allowed to be null but other things must not be null 
-when they're null and gets really complicated
-what we want to do is have a look at how we can get those fat events back down to thin events
-with not much information on them
-a much more loosely coupled system
+订单被创建出来，然后发布一个 event 给 finance 和 shipping。
+finance 收到这个 evnet 的时候，它可以为这个订单收取客户的费用。
+它接着可能会发一个 order billed 的事件。
+然后 shipping 知道订单创建了并且被 billed 了，它就可以发货了。
+发货完成之后，再发一个 shipped 事件出来。
 
+问题是：这些 event 都包含什么字段呢? 是不是 order placed 事件需要包含 shipping 所需的所有字段呢? 要不然 shipping 咋知道发往哪里。
+是不是事件需要包含 finance 像客户收费所需的所有信息呢? 比如客户的信用卡详情之类的东西。
 
-what if we could get it down we could get those events down to just an ID
-so what if we said what if sales said order 1 2 3 has been placed
-finance says right order 1 2 3 I know how to charge for that order
-I'm going to charge a credit card or I'm going to start a Bitcoin transaction 
-we then say order 1 2 3 has been placed to shipping order
-1 2 3 has been billed to shipping an order
-and at that point shipping can say right order 1 2 3 I'm going to ship that to a physical address
-I'm going to send an email now
-that would work fine as well
+这么搞是可以行得通的。但是这种方式带来的问题是“耦合”。
+如果事件需要包含送货方式，信用卡详情等所有信息，
+我们又回到了高度耦合的被动场面里了。
+我们又不能以独立的方式来修改系统行为了。
 
+假设我们要开始支持用比特币付费了，我们需要给 sales 增加关于如何用比特币收费的信息。所以 sales 可以把这些信息再传给 finance。
 
-but we've got a problem here if sales is responsible for creating orders
-so sales is the only thing that can say yes we can feel the fulfill this order 
-at that point it will create an order object with an ID
-and it will save it to its database
-now how can finance possibly know about that order before it's been created
-how can finance know what to do for order 1 2 3
-if we're not creating the order ID 1 2 3 until we create the order in sales
-it's a chicken egg scenario
-but the thing is what we've said so far is we're going to create that order at the end of the workflow right
-so we're saying we're creating it when we place the order
-what if we turn that upside down and we create the ID right at the beginning 
-we can do it right here
+如果我们要开始售卖电子书了，我们不希望买电子书也提供一个送货的门牌号。
+所以我们又要修改以下 sales，从而它可以把电子书的信息传给 shipping。
 
-【图】
+上面这样的 event 就是所谓的 fat event。
+可以看到，如果我们要开始卖电子书，或者收取比特币，这些 event 会变得越来越 fat，字段越来越多。
+再某些时候，一些字段允许为 null，在其他场景下，这些字段又是必填的。
+当它们是 null 的时候，事情就变麻烦了。
+那我们如何把 fat event 重新又变回 thin event 呢? 如何让系统变得更松耦合呢?
 
-proceed to the checkout
-and you can do this client side as well
-you can create a good client side uuid
-what this allows us to do is when we go into the rest of the workflow 
-we can say write shipping here's the address and the order ID is 1 2 3
-because we've already for the order ID when we said when we said place the place order 
-when we go to finance we can say right here the credit card details for order 1 2 3
-etc etc until you get to the end of the workflow 
-that's when you send that command to sales to say place order
-now if you want to if you want to introduce something like Bitcoin payment
-we can make changes just in the finance service
-because when finance service gets order 1 2 3
-it can say ah I know how to charge wrist
-it's either a credit card or its Bitcoin
-and I can do the appropriate thing
-similarly in shipping we can now ship ebooks without having to make changes in sales
-we can do that isolated just in shipping
-and the one weird trick that and they want us to do that was setting the ID at the front instead of at the beginning
-now you might be thinking what if we tell the system where to ship our order 
-we tell them how to charge rear
-but the last minute your spouse walks through a door 
-and they say ah now I'd better not all of this that we mad 
-so you cancel the order 
-you're closed a browser 
-shipping is going to be sitting there with a whole bunch of addresses
-which is never going to ship to 
-finance gonna is going to be sitting there with a whole bunch of a bunch of payment details
-which is never going to charge for
-isn't that redundant data
-isn't someone gonna have to come along and clean this data up 
-we're gonna be holding all that junk right
-but is it really redundant so
-some businesses would they would kill for that kind of information 
-they want to know who's selecting products and where they want into the shipment to 
-but then don't complete their order right
-because then you can give that to kind of your design team and your workflow team
-and you can say well how can we make this better so that more people actually go and create
-actually go and fint finalize the order
-so it can actually be really really useful information 
-you can get rich business data analytics from that incomplete order information storage
-you know it's gonna be a row in a database
-you know who really cares about how much that's gonna cost
-but ultimately you don't really have to keep it in a database
-either so some services might choose to hold it in some kind of session state that might be more applicable for finance 
-you don't necessarily want to keep credit card details sitting in a database
-you might choose to hold them in session state so that will go away if the orders cancel naturally
+如果我们在这些 event 上只包含 id 会怎么样?
+如果 sales 在 order placed 的事件里仅仅说 order123 下单了。
+finance 收到 order123 之后，它已经知道如何对这个订单收费了。
+它要么是用信用卡收费，要么是开始一个比特币的交易。
+接下来 finance 告诉 shipping，order123 已经被 billed 了。
+shipping 收到 order123 之后，它知道要把这个订单配送到一个物理的门牌地址，
 
-now so so what is it why why is it that we end up in this big ball of mud scenario
-if we can do things like we just described
-we're only sharing IDs
-well it was this here right that's where the problem started
-it was the sharing of data 
-as soon as we started to share data between services
-it it got this kind of ball rolling bounced down 
-and it got us kind of moving towards that that possible end of that big ball of mud scenario
-so this is what we want to avoid
-want to avoid sharing data between services 
+finance 和 shipping 是怎么知道如何处理 order123 的呢?
+
+![ui-composition](./ui-composition.png)
+
+如上图所示，
+这种 thin event 可以行得通的前提就在于每个 service 都有自己的 ui，它们可以直接从用户那里得到自己关心的数据。但是这种方法有两个问题
+
+第一个问题是：如果订单要 sales 处理完之后才创建，那么 finance 和 shipping 的界面把自己的数据存到哪里呢? finance 和 shipping 怎么能在订单创建之前就知道订单在哪里呢? 这不就是先有鸡，还是先有蛋的问题了吗?
+
+解决办法就是我们要在这个工作流的开始就把 order id 给生成出来，也就是这里
+
+![proceed-to-checkout](./proceed-to-checkout.png)
+
+甚至我们可以直接在网页上用 uuid 生成这个 order id。这使得在工作流的后面的步骤里，shipping 你要发到这个地址，订单id 是 123.
+在finance那一步，你要从这个选择信用卡收费，订单id 是123。
+直到工作流的最后异步，你才把 command 发给 sales，确认订单。
+
+这样如果你想要支持比特币付款，我们仅仅只需要修改 finance。
+因为 finance 收到 order123 的时候，它已经直到了该怎么收费了。
+类似的，如果我要支持电子书的线上发货，我们也不需要修改 sales 了，我们可以把改动局限在 shipping 内部。
+这么搞唯一诡异的地方就是要在流程的开端就把 order id 生成出来。
+
+第二个问题：如果你把这么几步都填完了，再最后快下单的时候，你老婆从房里出来让你别剁手了，你不得不取消订单。你关闭了浏览器。这个时候，你填的收货地址，你选择的信用卡信息都卡在 finance 和 shipping 的手里，没法往下走了。
+这些未完成的订单不算是浪费存储资源，不算是垃圾么?
+垃圾只是放错了位置的资源。商家也许非常希望直到是哪些商品被选择了，但是没有完成下单的。
+他们可以拿这些数据去优化购物下单的转化流程。这些数据都是非常有分析价值的。
+而且你也直到，这些数据不过是数据库里的一行而已，也没有多少人会关心这些数据会带来多少开销。
+而且也未必是要落盘到数据库，比如信用卡详情之类的东西，因为其敏感性，也许放在 session 里是更恰当的。这样当订单被取消的时候，这些 session 里的信息也自然就没有了。
+
+在这个例子里，我们可以看到。模块与模块之间有两个集成方式
+
+* 在同一个界面里，左边渲染 sales，右边渲染 billing。两个模块通过共享同一块屏幕的方式实现了基于 UI 的集成
+* sales => finance => shipping 的事件里只包含了 id
+
+在这个 UI 集成的例子里，我们可以再展开以下。如果，产品的需求是这样的：
+
+![batch-ui](./batch-ui.drawio.svg)
+
+这种情况下，配送方式和收费方式就不再是独立保存了。它们要在点确认的时候统一保存，而且要在同一个弹框里反馈保存成功与否。在这种情况下配送方式和收费方式就不能仅仅提供
+
+```
+render()
+```
+
+这么一个集成接口。还需要提供
+
+```
+render()
+save(): err
+renderError(err)
+```
+
+注入这样的更多的接口出来，才能在 UI 上拼装出所需要的产品体验。但即便是这样，像支持比特币付款这样的需求改动，我们仍然是可以封闭在 finance 模块内部来完成。
