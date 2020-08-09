@@ -75,3 +75,16 @@ command/control的关系，时序上紧耦合，反面例子
 * vscode 插件，减少编辑成本
 * 运行时 tracing
 
+
+what changed
+
+* bottom up v.s. top down (david parnas, ooram methods)
+* ui hold back: microfrontend 
+* persistence hold back
+* static composition
+
+# TODO
+
+* 把第一个例子往中台和业务身份上引伸
+* 把 MDA 的例子插入到第二个位置上
+* 第三章以 problem - solution 的方式组织，把所有“行不通”理由罗列出来，逐个给解决方案
